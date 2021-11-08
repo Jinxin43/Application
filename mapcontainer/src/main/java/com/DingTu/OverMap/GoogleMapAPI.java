@@ -23,8 +23,8 @@ public class GoogleMapAPI {
 
         //String url = "http://tile%1$s.tianditu.com/DataServer?T=A0512_EMap&x=%2$s&y=%3$s&L=%4$s";
         //url = String.format(url, (col%4),col,row,level);
-
-        String url = "http://mt3.google.cn/vt/lyrs="+lysType+"&"+"x=" + col + "&y=" + row + "&z=" + level+"&s=" + s;
+    String  url="http://www.ditushuju.cn:8090/WeServer/wmts/1.0.0/acimage_mct_app/default/mct/"+level+"/"+row+"/"+col+".jpg";
+//        String url = "http://mt3.google.cn/vt/lyrs="+lysType+"&"+"x=" + col + "&y=" + row + "&z=" + level+"&s=" + s;
         return url;
     }
 

@@ -1,7 +1,8 @@
 package com.example.event.db.entity;
 
-import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.Index;
+import androidx.room.Entity;
+import androidx.room.Index;
+
 import com.example.event.model.FenUploadId;
 import org.xutils.db.annotation.Column;
 

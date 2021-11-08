@@ -1,16 +1,9 @@
 package com.example.event;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.service.autofill.FillEventHistory;
-import android.support.annotation.NonNull;
-import android.support.v4.view.PagerAdapter;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,13 +12,19 @@ import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.PagerAdapter;
+
 import com.DingTu.Base.PubVar;
 import com.example.event.View.RecyclerViewSpacesItemDecoration;
 import com.example.event.controls.MyViewpager;
 import com.example.event.db.xEntity.FenAllTableEntity;
 import com.example.event.db.xEntity.RoundExamineEntity;
 import com.example.event.manager.PatrolManager;
-import com.example.event.model.FenAllTable;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -144,6 +143,7 @@ public class ListExamineActivity extends AppCompatActivity {
 
     }
 
+    @SuppressLint("WrongConstant")
     private void initOne(View singleTreeView) {
         mRecyView = (RecyclerView) singleTreeView.findViewById(R.id.list_examine);
         mRecyView.addItemDecoration(new RecyclerViewSpacesItemDecoration(10));

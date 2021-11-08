@@ -1,8 +1,10 @@
 package com.example.event.db.entity;
 
-import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.Index;
-import android.arch.persistence.room.PrimaryKey;
+import androidx.annotation.NonNull;
+import androidx.room.Entity;
+import androidx.room.Index;
+import androidx.room.PrimaryKey;
+
 import com.example.event.model.FenAllTable;
 import java.io.Serializable;
 
@@ -10,6 +12,7 @@ import java.io.Serializable;
         @Index(value = "landOrder")
 })
 public class FenAllTableEntity implements FenAllTable, Serializable {
+    @NonNull
     @PrimaryKey
     private String landOrder;
     private String gpsTime;

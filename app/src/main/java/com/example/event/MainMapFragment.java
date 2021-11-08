@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
-import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,6 +21,8 @@ import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
 
 import com.DingTu.Base.DoEvent;
 import com.DingTu.Base.HashValueObject;
@@ -635,15 +636,15 @@ public class MainMapFragment extends Fragment {
         _BKLayerExplorer.OpenBKDataSource();
 
         //读取工程的上次视图范围，如果没有则全图显示
-        Envelope pEnv = _ProjectExplorer.ReadShowExtend();
-        if (pEnv != null) {
-            PubVar.m_MapControl.setActiveTool(com.DingTu.mapcontainer.Tools.FullScreenSize);
-            PubVar.m_Map.setExtend(pEnv);
-//            PubVar.m_Map.Refresh();
-        } else {
-            PubVar.m_MapControl.setActiveTool(com.DingTu.mapcontainer.Tools.FullScreen);
-        }
-
+//        Envelope pEnv = _ProjectExplorer.ReadShowExtend();
+//        if (pEnv != null) {
+//            PubVar.m_MapControl.setActiveTool(com.DingTu.mapcontainer.Tools.FullScreenSize);
+//            PubVar.m_Map.setExtend(pEnv);
+////            PubVar.m_Map.Refresh();
+//        } else {
+//            PubVar.m_MapControl.setActiveTool(com.DingTu.mapcontainer.Tools.FullScreen);
+//        }
+        PubVar.m_MapControl.setActiveTool(com.DingTu.mapcontainer.Tools.FullScreen);
         PubVar.m_Map.Refresh();
         PubVar.m_MapControl.setActiveTool(ZoomInOutPan);
 

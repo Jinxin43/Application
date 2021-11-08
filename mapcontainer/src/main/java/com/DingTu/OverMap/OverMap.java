@@ -202,7 +202,7 @@ public class OverMap {
 
             //获取当前视图下每个像素代表的高度值，也就是确定栅格图的级数
             int Level = this.GetCurrentLevel(this.Map.ToMapDistance(1));
-            Log.d("TAG", Level + "**********");
+
             //Envelope _NextEnve = null;
             //当前屏幕的左上角，右下角坐标
             Coordinate LeftTop, RightBottom;
@@ -240,7 +240,6 @@ public class OverMap {
             Param EndX = new Param(), EndY = new Param();
             Coordinate RB = Project_Web.Web_XYToBL(RBX, RBY);
             GoogleMapAPI.GetTileXY(RB.getX(), RB.getY(), Level, EndX, EndY);
-            Log.d("TAG",StartX.getInt()+"==="+StartY.getInt()+"==="+EndX.getInt()+"==="+EndY.getInt());
             if (StartX.getInt() >= 0 && StartY.getInt() >= 0 && EndX.getInt() >= 0 && StartY.getInt() >= 0) {
 
                 //构造调用小切片名称列表
