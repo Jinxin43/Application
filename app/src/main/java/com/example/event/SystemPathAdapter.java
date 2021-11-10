@@ -85,7 +85,7 @@ public class SystemPathAdapter extends BaseAdapter {
                 }
 
             }
-            if (VType.equals("android.widget.CheckBox")) {
+            if (VType.equals("androidx.appcompat.widget.AppCompatCheckBox")) {
 
                 CheckBox cb = (CheckBox) v;
                 cb.setTag(position + "," + i);
@@ -98,7 +98,7 @@ public class SystemPathAdapter extends BaseAdapter {
                 });
                 cb.setChecked(Boolean.parseBoolean(obj.get(this.m_ObjField[i]).toString()));
             }
-            if (VType.equals("android.widget.ImageButton")) {
+            if (VType.equals("androidx.appcompat.widget.AppCompatImageButton")) {
                 v.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
